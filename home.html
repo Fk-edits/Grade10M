@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Websuate - Innovative Web Solutions</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #2b2b8f, #6a82fb);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    /* Logo animation */
+    @keyframes logo-rotate {
+      0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+      }
+      33% {
+        transform: rotateX(360deg) rotateY(0) rotateZ(0);
+      }
+      67% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(0);
+      }
+      100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+      }
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+      animation: logo-rotate 5s ease-in-out infinite;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: #fff;
+      width: 0;
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      letter-spacing: 1.2px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+
+    .btn-primary {
+      background: #ff4d6d;
+      color: white;
+      padding: 15px 35px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(255, 77, 109, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+
+    .btn-primary:hover {
+      background: #881129;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px rgba(224, 67, 99, 0.5);
+    }
+
+    .hero-image {
+      flex: 1.5;
+      max-width: 200px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 30px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    footer {
+      background: rgba(0,0,0,0.2);
+      padding: 20px 50px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ddd;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      main {
+        flex-direction: column-reverse;
+      }
+      .hero-text {
+        text-align: center;
+      }
+      nav a {
+        margin-left: 20px;
+        font-size: 0.95rem;
+      }
+
+header {
+        padding: 15px 20px;
+      }
+      footer {
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">10M</div>
+    <nav>
+      <a href="students.html">STUDENTS</a>
+      <a href="images.html">PICTURES</a>
+      <a href="https://t.me/+kQdrQCZ8W_0wMDU0">TELEGRAM</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero-text">
+      <h1>WELLCOME TO SASS 10M OFFICIAL WEBSITE </h1>
+      <p> At This Website You Can Get An Information About SASS Grade 10M 2017 e.c Students</p>
+      <button class="btn-primary" onclick="window.location.href='images.html'">ENJOY PICTURES</button>
+    </div>
+    <div class="hero-image">
+      <img src="images/photo15.jpg" alt="logo" />
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2024 Websuate. All Rights Reserved.
+  </footer>
+</body>
+</html>

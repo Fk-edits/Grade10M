@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - 10M</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #2b2b8f, #6a82fb);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .folders {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .folder {
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .folder img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .folder:hover {
+      transform: scale(1.1);
+    }
+
+    .gallery, .video-gallery {
+      display: none;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery.active, .video-gallery.active {
+      display: flex;
+    }
+
+    .gallery img, .video-gallery video {
+      width: 23%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover, .video-gallery video:hover {
+      transform: scale(1.05);
+    }
+
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .modal img, .modal video {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 10px;
+      transition: transform 0.6s;
+      backface-visibility: hidden;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      z-index: 10000;
+      background: rgba(0,0,0,0.5);
+      padding: 8px 16px;
+      border-radius: 50%;
+    }
+
+    .modal-btns {
+      margin-top: 20px;
+    }
+
+    .modal-btns button {
+      padding: 10px 20px;
+      background: #ffffff22;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: background 0.3s;
+    }
+
+    .modal-btns button:hover {
+      background: #ffffff44;
+    }
+
+    .flip-h {
+      transform: scaleX(-1);
+    }
+
+    .flip-v {
+      transform: scaleY(-1);
+    }
+
+    @media (max-width: 768px) {
+      .gallery img, .video-gallery video {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery img, .video-gallery video {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>10M Gallery</h1>
+</header>
+
+<div class="folders">
+  <div class="folder" onclick="showGallery('photos')">
+    <img src="images/icon.jpg" alt="Photos Folder" />
+    <p>Photos</p>
+  </div>
+  <div class="folder" onclick="showGallery('videos')">
+    <img src="images/icon1.jpg" alt="Videos Folder" />
+    <p>Videos</p>
+  </div>
+</div>
+
+<div id="photos" class="gallery active">
+  <img src="images/photo1.jpg" alt="Pic 1" onclick="openModal(this.src, 'image')">
+  <img src="images/photo2.jpg" alt="Pic 2" onclick="openModal(this.src, 'image')">
+  <img src="images/photo3.jpg" alt="Pic 3" onclick="openModal(this.src, 'image')">
+  <img src="images/photo4.jpg" alt="Pic 4" onclick="openModal(this.src, 'image')">
+  <img src="images/photo5.jpg" alt="Pic 5" onclick="openModal(this.src, 'image')">
+  <img src="images/photo6.jpg" alt="Pic 6" onclick="openModal(this.src, 'image')">
+  <img src="images/photo7.jpg" alt="Pic 7" onclick="openModal(this.src, 'image')">
+  <img src="images/photo8.jpg" alt="Pic 8" onclick="openModal(this.src, 'image')">
+  <img src="images/photo9.jpg" alt="Pic 9" onclick="openModal(this.src, 'image')">
+  <img src="images/photo10.jpg" alt="Pic 10" onclick="openModal(this.src, 'image')">
+  <img src="images/photo11.jpg" alt="Pic 11" onclick="openModal(this.src, 'image')">
+  <img src="images/photo12.jpg" alt="Pic 12" onclick="openModal(this.src, 'image')">
+  <img src="images/photo13.jpg" alt="Pic 13" onclick="openModal(this.src, 'image')">
+  <img src="images/photo14.jpg" alt="Pic 14" onclick="openModal(this.src, 'image')">
+  <img src="images/photo15.jpg" alt="Pic 15" onclick="openModal(this.src, 'image')">
+  <img src="images/photo16.jpg" alt="Pic 16" onclick="openModal(this.src, 'image')">
+  <img src="images/photo17.jpg" alt="Pic 17" onclick="openModal(this.src, 'image')">
+  <img src="images/photo18.jpg" alt="Pic 18" onclick="openModal(this.src, 'image')">
+  <img src="images/photo19.jpg" alt="Pic 19" onclick="openModal(this.src, 'image')">
+  <img src="images/photo20.jpg" alt="Pic 20" onclick="openModal(this.src, 'image')">
+  <img src="images/photo21.jpg" alt="Pic 21" onclick="openModal(this.src, 'image')">
+  <img src="images/photo22.jpg" alt="Pic 22" onclick="openModal(this.src, 'image')">
+  <img src="images/photo23.jpg" alt="Pic 23" onclick="openModal(this.src, 'image')">
+  <img src="images/photo24.jpg" alt="Pic 24" onclick="openModal(this.src, 'image')">
+  <img src="images/photo25.jpg" alt="Pic 25" onclick="openModal(this.src, 'image')">
+  <img src="images/photo26.jpg" alt="Pic 26" onclick="openModal(this.src, 'image')">
+  <img src="images/photo27.jpg" alt="Pic 27" onclick="openModal(this.src, 'image')">
+  <img src="images/photo28.jpg" alt="Pic 28" onclick="openModal(this.src, 'image')">
+  <img src="images/photo29.jpg" alt="Pic 29" onclick="openModal(this.src, 'image')">
+  <img src="images/photo30.jpg" alt="Pic 30" onclick="openModal(this.src, 'image')">
+  <img src="images/photo31.jpg" alt="Pic 31" onclick="openModal(this.src, 'image')">
+  <img src="images/photo32.jpg" alt="Pic 32" onclick="openModal(this.src, 'image')">
+  <img src="images/photo33.jpg" alt="Pic 33" onclick="openModal(this.src, 'image')">
+  <img src="images/photo34.jpg" alt="Pic 34" onclick="openModal(this.src, 'image')">
+  <img src="images/photo35.jpg" alt="Pic 35" onclick="openModal(this.src, 'image')">
+  <img src="images/photo36.jpg" alt="Pic 36" onclick="openModal(this.src, 'image')">
+</div>
+
+<!-- Videos -->
+<div id="videos" class="video-gallery">
+  <video src="images/video1.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video2.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video3.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video4.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video5.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video6.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video7.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video8.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video9.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video1.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video2.mp4" onclick="openModal(this.src, 'video')"></video>
+  <video src="images/video3.mp4" onclick="openModal(this.src, 'video')"></video>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <span class="close-btn" onclick="closeModal()">&times;</span>
+  <div id="modal-content"></div>
+  <div class="modal-btns" id="modal-buttons">
+    <button onclick="flipImage()">Flip</button>
+  </div>
+</div>
+
+<script>
+  let currentSrc = '';
+  let currentType = '';
+  let flipH = false;
+  let flipV = false;
+
+  function showGallery(type) {
+    document.getElementById('photos').classList.remove('active');
+    document.getElementById('videos').classList.remove('active');
+    document.getElementById(type).classList.add('active');
+  }
+
+  function openModal(src, type) {
+    currentSrc = src;
+    currentType = type;
+    const modalContent = document.getElementById('modal-content');
+    modalContent.innerHTML = '';
+    flipH = false;
+    flipV = false;
+
+    const flipButton = document.getElementById('modal-buttons');
+    if (type === 'image') {
+      const img = document.createElement('img');
+      img.src = src;
+      img.id = 'modal-img';
+      modalContent.appendChild(img);
+      flipButton.style.display = 'block';
+    } else if (type === 'video') {
+      const video = document.createElement('video');
+      video.src = src;
+      video.controls = true;
+      video.autoplay = true;
+      modalContent.appendChild(video);
+      flipButton.style.display = 'none';
+    }
+
+    document.getElementById('modal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+
+  function flipImage() {
+    const img = document.getElementById('modal-img');
+    if (!img) return;
+
+    if (!flipH && !flipV) {
+      img.classList.add('flip-h');
+      flipH = true;
+    } else if (flipH && !flipV) {
+      img.classList.remove('flip-h');
+      img.classList.add('flip-v');
+      flipH = false;
+      flipV = true;
+    } else if (!flipH && flipV) {
+      img.classList.remove('flip-v');
+      img.classList.add('flip-h', 'flip-v');
+      flipH = true;
+    } else {
+      img.classList.remove('flip-h', 'flip-v');
+      flipH = flipV = false;
+    }
+  }
+</script>
+
+</body>
+</html>
