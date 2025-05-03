@@ -6,7 +6,7 @@
   <title>10M</title>
   <style>
     body {
-      background-color: #f0f0f0;
+      background-color: #33A1FD;
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
@@ -19,13 +19,13 @@
       padding: 30px;
       border-radius: 10px;
       width: 300px;
-      box-shadow: 0 0 30px rosybrown;
+      box-shadow: 0 0 30px #31393C;
     }
 
     .login-container h2 {
       text-align: center;
       margin-bottom: 10px;
-      color: blue;
+      color: #31393C;
     }
 
     input[type="text"],
@@ -33,21 +33,34 @@
       width: 82%;
       padding: 5%;
       margin: 8px 0;
-      border: 2px solid skyblue;
+      border: 2px solid #2176FF;
       border-radius: 10px;
     }
 
     button {
       width: 94%;
       padding: 10px;
-      background-color: blue;
+      background-color: #F79824;
+      color: white;
       border: none;
       border-radius: 10px;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: skyblue;
+      background-color: #FDCA40;
+    }
+
+    a {
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+      color: #2176FF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -58,8 +71,7 @@
       <input type="text" id="username" placeholder="NAME" required>
       <input type="password" id="password" placeholder="ID" required>
       <button type="submit">LOGIN</button>
-      <a href="https://t.me/+kQdrQCZ8W_0wMDU0"> forget password? </a>
-      
+      <a href="https://t.me/+kQdrQCZ8W_0wMDU0">Forget password?</a>
     </form>
   </div>
 
@@ -68,7 +80,6 @@
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
 
-    
       if (username === "10" && password === "m") {
         window.location.href = "home.html"; 
         return false;
