@@ -1,144 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
-    <style>
-        /* Header box style */
-        .header-box {
-            background-color: #0077b5; /* Background color for the header box */
-            color: white;
-            padding: 20px;
-            text-align: left; /* Align text to the left */
-            font-family: Arial, sans-serif;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Header box style */
+    .header-box {
+      background-color: #0f3d3e;
+      color: #f1f6f9;
+      padding: 20px;
+      text-align: left;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
 
-        .header-box h1 {
-            font-size: 36px;
-            margin: 0;
-        }
+    .header-box h1 {
+      font-size: 36px;
+      margin: 0;
+    }
 
-        .header-box span {
-            font-size: 72px; /* Larger size for 10M */
-        }
+    .header-box span {
+      font-size: 72px;
+    }
 
-        /* Back button style */
-        .back-button {
-            display: inline-block;
-            background-color: #ff5722; /* Button color */
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
+    /* Back button style */
+    .back-button {
+      display: inline-block;
+      background-color: #1a5d1a;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
 
-        .back-button:hover {
-            background-color: #e64a19; /* Darker color on hover */
-        }
+    .back-button:hover {
+      background-color: #145953;
+    }
 
-        /* Basic styling for the student profiles */
-        .student-profile {
-            display: flex;
-            align-items: center;
-            margin: 20px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f4f4f4;
-        }
+    /* Basic styling for the student profiles */
+    .student-profile {
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #e6f0ec;
+    }
 
-        .student-profile img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
+    .student-profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
 
-        .student-info {
-            font-family: Arial, sans-serif;
-        }
+    .student-info {
+      font-family: Arial, sans-serif;
+    }
 
-        .student-info h3 {
-            margin: 0;
-            color: #333;
-        }
+    .student-info h3 {
+      margin: 0;
+      color: #0f3d3e;
+    }
 
-        .social-media {
-            margin-top: 10px;
-        }
+    .social-media {
+      margin-top: 10px;
+    }
 
-        .social-media a {
-            text-decoration: none;
-            margin-right: 15px;
-            color: #0077b5; /* LinkedIn blue color */
-        }
+    .social-media a {
+      text-decoration: none;
+      margin-right: 15px;
+      color: #227c70;
+    }
 
-        .social-media a:hover {
-            color: #005fa3;
-        }
-    </style>
+    .social-media a:hover {
+      color: #145953;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Back Button -->
-    <a href="home.html" class="back-button">Back to Homepage</a>
+  <!-- Back Button -->
+  <a href="home.html" class="back-button">Back to Homepage</a>
 
-    <!-- Header box at the top -->
-    <div class="header-box">
-        <h1><span>10M</span> Students</h1>
-    </div>
+  <!-- Header box at the top -->
+  <div class="header-box">
+    <h1><span>10M</span> Students</h1>
+  </div>
 
-    <!-- Student Profiles (20 students) -->
-    <div class="student-profile">
-        <img src="student1.jpg" alt="Student 1">
-        <div class="student-info">
-            <h3>Maraki</h3>
-            <p> Ebd </p>
-            <div class="social-media">
-                
-               
-                <a href="none" target="_blank">Instagram</a>
-            </div>
-        </div>
+  <!-- Student Profiles -->
+  <div class="student-profile">
+    <img src="student1.jpg" alt="Student 1">
+    <div class="student-info">
+      <h3>Maraki</h3>
+      <p>Ebd</p>
+      <div class="social-media">
+        <a href="none" target="_blank">Instagram</a>
+      </div>
     </div>
-    
-    <div class="student-profile">
-        <img src="student2.jpg" alt="Student 2">
-        <div class="student-info">
-            <h3>Dibo</h3>
-            <p>DEgua </p>
-            <div class="social-media">
-                
-                <a href="none" target="_blank">Telegram</a>
-                <a href="none" target="_blank">Instagram</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="student-profile">
-        <img src="student3.jpg" alt="Student 3">
-        <div class="student-info">
-            <h3>Bina</h3>
-            <p>celel</p>
-            <div class="social-media">
-                <a href="none" target="_blank">Instagram</a>
-                <a href="none" target="_blank">Telegram</a>
-                
-            </div>
-        </div>
-    </div>
-    
-    
-                   
-            
+  </div>
 
-    <!-- Continue adding student profiles as before -->
+  <div class="student-profile">
+    <img src="student2.jpg" alt="Student 2">
+    <div class="student-info">
+      <h3>Dibo</h3>
+      <p>DEgua</p>
+      <div class="social-media">
+        <a href="none" target="_blank">Telegram</a>
+        <a href="none" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="student-profile">
+    <img src="student3.jpg" alt="Student 3">
+    <div class="student-info">
+      <h3>Bina</h3>
+      <p>celel</p>
+      <div class="social-media">
+        <a href="none" target="_blank">Instagram</a>
+        <a href="none" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
+
