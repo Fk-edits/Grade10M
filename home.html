@@ -15,7 +15,7 @@
     }
 
     body {
-      background: linear-gradient(135deg, #2b2b8f, #6a82fb);
+      background: linear-gradient(135deg, #2176FF, #33A1FD);
       color: #fff;
       min-height: 100vh;
       display: flex;
@@ -28,13 +28,12 @@
       justify-content: space-between;
       align-items: center;
       background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 12px rgba(49, 57, 60, 0.2);
       position: sticky;
       top: 0;
       z-index: 10;
     }
 
-    /* Logo animation */
     @keyframes logo-rotate {
       0% {
         transform: rotateX(0) rotateY(0) rotateZ(0);
@@ -54,7 +53,7 @@
       font-size: 1.8rem;
       font-weight: 700;
       letter-spacing: 2px;
-      color: #fff;
+      color: #FDCA40;
       cursor: pointer;
       user-select: none;
       animation: logo-rotate 5s ease-in-out infinite;
@@ -73,7 +72,7 @@
       content: '';
       display: block;
       height: 2px;
-      background: #fff;
+      background: #FDCA40;
       width: 0;
       transition: width 0.3s ease;
       position: absolute;
@@ -106,17 +105,18 @@
       margin-bottom: 20px;
       line-height: 1.2;
       letter-spacing: 1.2px;
+      color: #31393C;
     }
 
     .hero-text p {
       font-size: 1.2rem;
       margin-bottom: 30px;
-      opacity: 0.85;
+      opacity: 0.9;
       line-height: 1.5;
     }
 
     .btn-primary {
-      background: #ff4d6d;
+      background: #F79824;
       color: white;
       padding: 15px 35px;
       font-weight: 700;
@@ -124,15 +124,15 @@
       border-radius: 40px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 8px 15px rgba(255, 77, 109, 0.3);
+      box-shadow: 0 8px 15px rgba(247, 152, 36, 0.3);
       transition: background 0.3s ease, transform 0.2s ease;
       user-select: none;
     }
 
     .btn-primary:hover {
-      background: #881129;
+      background: #FDCA40;
       transform: translateY(-4px);
-      box-shadow: 0 12px 20px rgba(224, 67, 99, 0.5);
+      box-shadow: 0 12px 20px rgba(253, 202, 64, 0.4);
     }
 
     .hero-image {
@@ -159,7 +159,7 @@
     }
 
     footer {
-      background: rgba(0,0,0,0.2);
+      background: rgba(49, 57, 60, 0.2);
       padding: 20px 50px;
       text-align: center;
       font-size: 0.9rem;
@@ -167,7 +167,6 @@
       user-select: none;
     }
 
-    /* Responsive */
     @media (max-width: 900px) {
       main {
         flex-direction: column-reverse;
@@ -179,8 +178,7 @@
         margin-left: 20px;
         font-size: 0.95rem;
       }
-
-header {
+      header {
         padding: 15px 20px;
       }
       footer {
@@ -201,8 +199,8 @@ header {
 
   <main>
     <div class="hero-text">
-      <h1>WELLCOME TO SASS 10M OFFICIAL WEBSITE </h1>
-      <p> At This Website You Can Get An Information About SASS Grade 10M 2017 e.c Students</p>
+      <h1>WELLCOME TO SASS 10M OFFICIAL WEBSITE</h1>
+      <p>At This Website You Can Get An Information About SASS Grade 10M 2017 e.c Students</p>
       <button class="btn-primary" onclick="window.location.href='images.html'">ENJOY PICTURES</button>
     </div>
     <div class="hero-image">
